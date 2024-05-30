@@ -1,6 +1,6 @@
-FROM debian:stretch
+FROM node:16
 RUN apt-get update -y && apt-get install -y nano wget curl gettext-base
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs
+# RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs
 
 RUN wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64.tar.gz -O - | tar xz && mv yq_linux_amd64 /usr/bin/yq
 
