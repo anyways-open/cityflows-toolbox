@@ -10,6 +10,6 @@ WORKDIR /app
 ENV NODE_OPTIONS=--max-old-space-size=2048
 ENV DISABLE_ESLINT_PLUGIN=true
 
-#COPY mount/app /
+COPY mount/app /
 
 CMD npm i --legacy-peer-deps && npm start
